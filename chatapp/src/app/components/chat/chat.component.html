@@ -1,0 +1,12 @@
+<div class="chat-container">
+  <input type="nickName" [(ngModel)]="nickName" (keyup.enter)="sendMessage()"/>
+  <ul>
+    <li *ngFor="let message of messages">
+      {{message.nickname}}::{{message.text}}
+    </li>
+  </ul>
+  <div class="input-container">
+    <input type="text" [(ngModel)]="newMessage" (keyup.enter)="sendMessage()"/>
+    <button (click)="sendMessage()">Send message</button>
+  </div>
+</div>
